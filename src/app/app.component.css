@@ -1,0 +1,39 @@
+/* General Body Style */
+body {
+    margin: 0;
+    background-color: white;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Wrapper that contains both sidebar and content */
+  .dashboard-wrapper {
+    display: flex;
+    height: 100vh;
+  }
+  
+  /* Sidebar Style - Fixed on the left */
+  app-hr-sidebar {
+    width: 280px; /* Width of Sidebar */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh; /* Full height */
+    overflow-y: auto;
+  }
+  
+  /* Main Content Style - Takes remaining space */
+  .main-content {
+    margin-left: 150px; /* Sidebar width */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  /* Content Area under Navbar */
+  .router-outlet {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto; /* Allows scrolling in case of overflow */
+  }
+  

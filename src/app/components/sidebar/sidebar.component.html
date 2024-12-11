@@ -1,0 +1,27 @@
+<div id="sidebar" class="sidebar">
+    <!-- Sidebar Header -->
+    <div class="sidebar-header">
+        <span class="fs-4">Task Manager</span>
+    </div>
+    <hr>
+
+    <!-- Navigation Links -->
+    <ul class="nav flex-column">
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['']">
+                <i class="bi bi-house-door"></i> Home
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['add-task']">
+                <i class="bi bi-clipboard-plus"></i> Add Task
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['getByTitle']">
+                <i class="bi bi-clipboard-plus"></i> Get Task By Title
+            </a>
+        </li>
+    </ul>
+    <hr>
+</div>

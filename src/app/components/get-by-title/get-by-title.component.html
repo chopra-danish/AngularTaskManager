@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">Enter The Title</div>
+        <div class="card-body">
+            <input type="text" placeholder="Enter Title" [(ngModel)]="task_title">
+        </div>
+        <div>
+            <button class="btn btn-primary" (click)="submit()">
+                Submit
+            </button>
+        </div>
+    </div>
+</div>
+<div class="container mt-4" *ngIf="success">
+    <hr>
+    <div class="row justify-content-center">
+        <div class="col-md-4 mb-4" *ngFor="let task of tasks">
+            <div class="card shadow-sm">
+                <div class="card-body position-relative">
+                    <!-- ID Badge -->
+                    <span class="badge bg-dark position-absolute top-0 start-0 m-2">
+                        ID: {{task.id}}
+                    </span>
+                    <!-- Priority Badge -->
+                    <span class="badge position-absolute top-0 end-0 m-2" [ngClass]="getPriorityClass(task.priority)">
+                        {{task.priority}}
+                    </span>
+                    <!-- Title -->
+                    <h5 class="card-title text-center">{{task.title}}</h5>
+                    <hr>
+                    <!-- Description -->
+                    <p class="card-text">{{task.description}}</p>
+                    <!-- Due Date -->
+                    <p class="text-muted"><strong>Due:</strong> {{task.due_date}}</p>
+                    <!-- Status -->
+                    <p><strong>Status:</strong> {{task.status}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
